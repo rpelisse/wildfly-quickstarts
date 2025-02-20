@@ -16,7 +16,7 @@
         <version>10</version>
         <relativePath/>
     </parent>
-    <artifactId>helloworld-rs</artifactId>
+    <artifactId>edvige</artifactId>
     <version>36.0.0.Beta1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Quickstart: helloworld-rs</name>
@@ -55,12 +55,18 @@
 
     <dependencies>
         <!-- Import the Jakarta REST API, we use provided scope as the API is included in the server -->
+		<!--dependency>
+  		  <groupId>org.apache.tomee</groupId>
+  		  <artifactId>jakartaee-api</artifactId>
+          <version>10.0</version>
+          <scope>provided</scope>
+		</dependency-->
         <dependency>
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta.ws.rs-api</artifactId>
             <scope>provided</scope>
         </dependency>
-        
+
         <!-- Tests -->
         <dependency>
             <groupId>junit</groupId>
@@ -90,6 +96,32 @@
             <groupId>org.eclipse.parsson</groupId>
             <artifactId>parsson</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--dependency>
+            <groupId>javax.jdo</groupId>
+            <artifactId>jdo-api</artifactId>
+            <version>3.2.1</version>
+            <scope>provided</scope>
+        </dependency-->
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.ejb</groupId>
+            <artifactId>jakarta.ejb-api</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
