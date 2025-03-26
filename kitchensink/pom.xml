@@ -44,7 +44,7 @@
 
     <properties>
         <!-- the Maven project should use the minimum Java SE version supported -->
-        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.release>11</maven.compiler.release>
         <!-- the version for the Server -->
         <version.server>35.0.1.Final</version.server>
         <!-- the versions for BOMs, Packs and Plugins -->
@@ -101,8 +101,8 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Bean Validation Implementation 
-        Provides portable constraints such as @Email 
+        <!-- Bean Validation Implementation
+        Provides portable constraints such as @Email
         Hibernate Validator is shipped in JBoss EAP -->
         <dependency>
             <groupId>org.hibernate.validator</groupId>
@@ -221,12 +221,15 @@
             </activation>
             <build>
                 <plugins>
-                    <plugin>
+                    <!--plugin>
                         <groupId>org.wildfly.plugins</groupId>
                         <artifactId>wildfly-maven-plugin</artifactId>
                         <configuration>
                             <discover-provisioning-info>
                                 <version>${version.server}</version>
+                                 <add-ons>
+                                    <add-on>postgresql</add-on>
+                                 </add-ons>
                             </discover-provisioning-info>
                         </configuration>
                         <executions>
@@ -236,7 +239,7 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin -->
                 </plugins>
             </build>
         </profile>
